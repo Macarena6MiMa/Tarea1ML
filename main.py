@@ -20,7 +20,6 @@ sns.set_theme(style="white")
 rs = np.random.RandomState(33)
 d = pd.DataFrame(data=rs.normal(size=(100, 6)),  # Changed to 6 columns
                  columns=list("origin"))
-
 corr = d.corr()
 mask = np.triu(np.ones_like(corr, dtype=bool))
 f, ax = plt.subplots(figsize=(11, 9))
